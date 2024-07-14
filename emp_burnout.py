@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 import pickle as pickle
 import os
 
-data = pd.read_excel("/content/employee_burnout_analysis-AI (2).xlsx")
+data = pd.read_excel("employee_burnout_analysis.xlsx")
 data.shape
 
 def preprocess_inputs(df):
