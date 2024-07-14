@@ -59,6 +59,8 @@ data.nunique()
 data.info()
 data.isnull().sum().values.sum()
 data.corr(numeric_only=True)['Burn Rate'][:-1]
+sns.pairplot(data)
+plt.show()
 data = data.dropna()
 data.shape
 data.dtypes
@@ -90,7 +92,6 @@ for i, c in enumerate(cat_columns):
 plt.show()
 data.columns
 
-:data = pd.get_dummies(data, columns=['Company Type', 'WFH Setup Available',
-       'Gender'], drop_first=True)
+data = pd.get_dummies(data, columns=['Company Type', 'WFH Setup Available','Gender'], drop_first=True)
 data.head()
 encoded_columns = data.columns
